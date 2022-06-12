@@ -4,7 +4,7 @@
 
 ## Scope of the project
 Currently, the results only include "**Name of the place**", "**Rating out of 5**" , "**Number of reviews**" and "**Link to restaurent page**". 
-This script was created to find best restaurents in city the based on number of reviews they have received.
+This script was created to find best restaurents in city based on number of reviews they have received.
 
 
 ## How to change the query to be searched?
