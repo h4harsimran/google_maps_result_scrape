@@ -34,7 +34,7 @@ driver.get('https://www.google.com/maps?q='
 # Title = Name of restaurent
 # rating = Star rating of restaurent out of 5
 # nor = Total number of reviews of restaurent
-column_names=['Title','rating','nor']
+column_names=['Title','rating','nor','link']
 res_data =pd.DataFrame(columns = column_names)
 
 #%%%
@@ -67,7 +67,8 @@ while True:
             title=res_list[i].find_element(By.CSS_SELECTOR,'div.NrDZNb').text
             rating=res_list[i].find_element(By.CSS_SELECTOR,'span.MW4etd').text
             NOR=int(res_list[i].find_element(By.CSS_SELECTOR,'span.UY7F9').text.replace("(", "").replace(")", "").replace(",", ""))
-            temp_data=pd.DataFrame({'Title':[title],'rating':[rating],'nor':[NOR]})
+            link=res_list[i].find_element(By.CSS_SELECTOR,'a.hfpxzc').get_attribute('href')
+            temp_data=pd.DataFrame({'Title':[title],'rating':[rating],'nor':[NOR],'link':[link]})
             res_data=pd.concat([res_data, temp_data], ignore_index=True)
         except:
             continue
