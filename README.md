@@ -1,4 +1,4 @@
-# Google maps result scapre and sort by Number of reviews
+# Google maps - Sort by Number of reviews
 *This script scrapes google maps results and save the results in a csv file sorted by number of reviews.*
 
 
