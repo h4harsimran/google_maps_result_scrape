@@ -1,5 +1,5 @@
 # google_maps_result_scrape
-*This script scrapes google maps results and save the results in a csv file sorted by number of reviews.
+*This script scrapes google maps results and save the results in a csv file sorted by number of reviews.*
 
 ## How to change the query to be searched?
 Change the search_string in the script file.
