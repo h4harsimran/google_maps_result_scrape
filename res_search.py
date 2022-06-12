@@ -32,6 +32,7 @@ driver.get('https://www.google.com/maps?q='
 # Title = Name of restaurent
 # rating = Star rating of restaurent out of 5
 # nor = Total number of reviews of restaurent
+# link = link to restaurent page
 column_names=['Title','rating','nor','link']
 res_data =pd.DataFrame(columns = column_names)
 
