@@ -25,7 +25,7 @@ def get_driver():
            options.add_argument("--window-size=1920, 1200")
            options.add_argument('--disable-dev-shm-usage')
            driver = webdriver.Chrome(service=service, options=options)
-    return driver
+           return driver
 
 driver = get_driver()
 
