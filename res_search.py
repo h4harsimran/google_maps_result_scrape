@@ -57,7 +57,7 @@ while True:
     #define loop to scroll the webpage to load all the restaurents on one page
     k=0
     while k<8:
-        temp_res = driver.find_elements_by_xpath("//div[contains(@aria-label, 'Results')]/div//a[contains(@href, 'http')]")
+        temp_res = driver.find_elements("xpath", "//div[contains(@aria-label, 'Results')]/div//a[contains(@href, 'http')]")
         action = ActionChains(driver)
         action.move_to_element(temp_res[(len(temp_res))-1]).perform()
         temp_res[(len(temp_res))-1].location_once_scrolled_into_view
