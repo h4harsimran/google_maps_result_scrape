@@ -15,12 +15,20 @@ from selenium.webdriver.common.action_chains import ActionChains
 search_string = "restaurents in Brampton"
 
 
-# Open browser
-driver_path =r"chromedriver.exe"
-driver = webdriver.Chrome(executable_path=driver_path)
-# Maximizing browser window to avoid hidden elements
-driver.set_window_size(10000,10000)
-driver.maximize_window()
+def get_driver():
+           service = Service(ChromeDriverManager().install())
+           options = webdriver.ChromeOptions()
+           options.add_argument("--verbose")
+           options.add_argument('--no-sandbox')
+           options.add_argument('--headless')
+           options.add_argument('--disable-gpu')
+           options.add_argument("--window-size=1920, 1200")
+           options.add_argument('--disable-dev-shm-usage')
+           driver = webdriver.Chrome(service=service, options=options)
+    return driver
+
+driver = get_driver()
+
 
 # Opening google maps website
 driver.get('https://www.google.com/maps?q=' 
